@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>米法之死</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <script src="./js/jq.js"></script>
+  <link rel="stylesheet" href="./css/index1.css">
+
+</head>
+
+<body>
+
+  <div class="music-wrap" id="musicwrap">
+    <audio id="play1" controls>
+      <source src="./img/music.mp3">
+    </audio>
+  </div>
+
+
+  <canvas class="canvas-wrap" id="triangle-lost-in-space" resize="true"></canvas>
+
+  <!-- loadding -->
+  <div class="lodding-wrap">
+    <div class="loadding-div"></div>
+  </div>
+  <!-- 遮罩层 -->
+  <div class="zhezhao" id="zhezhao">
+    <span class="close"><svg t="1649229755294" class="icon" viewBox="0 0 1024 1024" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" p-id="4692" width="32" height="32">
+        <path
+          d="M512 0C229.187368 0 0 229.187368 0 512 0 794.812632 229.187368 1024 512 1024 794.812632 1024 1024 794.812632 1024 512 1024 229.187368 794.812632 0 512 0ZM512 970.105263C259.368421 970.105263 53.894737 764.631579 53.894737 512 53.894737 259.368421 259.368421 53.894737 512 53.894737 764.631579 53.894737 970.105263 259.368421 970.105263 512 970.105263 764.631579 764.631579 970.105263 512 970.105263ZM550.130526 512 719.629474 342.366316C730.273684 331.856842 730.273684 314.88 719.629474 304.370526 709.12 293.726316 692.143158 293.726316 681.633684 304.370526L512 473.869474 342.366316 304.370526C331.856842 293.726316 314.88 293.726316 304.370526 304.370526 293.726316 314.88 293.726316 331.856842 304.370526 342.366316L473.869474 512 304.370526 681.633684C293.726316 692.143158 293.726316 709.12 304.370526 719.629474 309.625263 724.884211 316.496842 727.578947 323.368421 727.578947 330.24 727.578947 337.111579 724.884211 342.366316 719.629474L512 550.130526 681.633684 719.629474C686.888421 724.884211 693.76 727.578947 700.631579 727.578947 707.503158 727.578947 714.374737 724.884211 719.629474 719.629474 730.273684 709.12 730.273684 692.143158 719.629474 681.633684L550.130526 512Z"
+          p-id="4693"></path>
+      </svg></span>
+    <div id="videoResume">
+      <video id="videoResumeC" controls="" name="media">
+        <source src="http://123.56.144.92/hualang/WhyDon'tWe.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- 主要页面 -->
+  <div class="box">
+
+    <!-- 顶部栏 -->
+    <div class="header borderafter">
+      <!-- 返回按钮 -->
+      <a style="position: absolute;left:50px;" href="javascript:history.back()">
+        <svg t="1649246285004" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          p-id="3737" width="20" height="20">
+          <path
+            d="M98 468.9l322.8-322.8v184.4C743.6 376.7 881.9 607.3 928 837.8 812.7 676.4 651.3 602.6 420.8 602.6v189.1L98 468.9z"
+            p-id="3738" fill="#254665"></path>
+        </svg>
+      </a>
+
+
+      <div class="col">
+        <span>遊戲簡歷</span>
+        <!-- 右边操作栏 -->
+
+        <div class="header-right">
+          <!-- 按钮 -->
+          <div class="min_menu-wrap" id="minmenu">
+            <span class="min_menu"></span>
+          </div>
+          <!-- 列表 -->
+          <div class="menu_list">
+            <!-- 栏目 -->
+            <ul class="header-nav">
+              <li class="active"><a href="./index2.html">HOME</a></li>
+              <li><a href="./contact.html">CONTACT</a></li>
+              <li><a href="./live.html">ELSE</a></li>
+            </ul>
+            <!-- 开关灯 -->
+            <span class="kaig-bottm">
+              <svg t="1649159647627" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="2250" width="15" height="15">
+                <path
+                  d="M1008.535135 710.670332l-70.446388 116.386904a112.099975 112.099975 0 0 1-140.572857 43.829042l-69.422645-17.083729c-5.502624 3.1992-11.133217 6.3984-16.763809 9.341665l-18.299425 62.896276C687.335435 981.514621 639.4754 1023.744064 582.657604 1023.744064H441.764828c-56.817796 0-104.677831-42.293427-110.308423-97.703574l-18.299425-62.896276a422.166458 422.166458 0 0 1-16.827793-9.341665l-69.614597 17.083729a112.163959 112.163959 0 0 1-140.508873-43.893026L15.631361 710.542364a107.493127 107.493127 0 0 1 32.43989-144.731817L96.251206 518.910272a410.649338 410.649338 0 0 1 0-14.204448l-48.179955-46.836291a107.365159 107.365159 0 0 1-32.375906-144.731817l70.190452-116.450888a112.099975 112.099975 0 0 1 140.572857-43.893026l69.550612 17.083729c5.566608-3.1992 11.133217-6.3984 16.827794-9.341665l18.299425-62.896276C336.831061 42.229443 384.691096 0 441.508892 0H582.529636c56.817796 0 104.677831 42.293427 110.372407 97.63959l18.235441 62.704324c5.75856 3.007248 11.325169 6.142464 16.827793 9.341665l69.678581-17.083729a112.163959 112.163959 0 0 1 140.508873 43.893026l70.446388 116.514872a107.493127 107.493127 0 0 1-32.375906 144.731817l-48.179955 46.772307a414.616346 414.616346 0 0 1 0 14.204448l48.243939 46.836291c47.092227 31.928018 62.192452 94.952262 32.247938 145.115721z m-213.066733-142.23644l3.391152-31.032242a246.210447 246.210447 0 0 0 0-51.699076l-3.263184-30.904274 93.992502-91.305173-53.554612-88.553862-131.615096 32.311922-23.546113-16.059985a294.134466 294.134466 0 0 0-48.627844-26.809297l-27.513121-11.901025L568.453156 127.968008H455.649356L419.370426 252.736816l-27.705074 11.965009c-16.635841 7.166208-32.951762 16.187953-48.499875 26.745313l-23.610097 15.996001-131.487128-32.247938-53.36266 88.489878 94.056486 91.433141-3.263184 30.968258a247.874031 247.874031 0 0 0 0 51.699076l3.1992 30.904274-93.928518 91.369157 53.554612 88.489878 131.551112-32.311922 23.610097 16.059985c15.292177 10.429393 31.544114 19.451137 48.563859 26.809297l27.577106 11.965009L455.905292 895.776056h112.611848l36.342914-124.768808 27.64109-11.965009c16.699825-7.166208 32.951762-16.187953 48.563859-26.745313l23.546113-15.996001 131.423144 32.247938 53.68258-88.745814-94.184454-91.369157zM512.147232 615.846038c57.329668 0 103.846038-46.516371 103.974006-103.974006 0-57.329668-46.644339-103.974006-103.974006-103.974007S408.173225 454.542364 408.173225 511.872032 454.817564 615.846038 512.147232 615.846038z m0 127.968008c-127.968008 0-231.942014-103.910022-231.942015-231.942014 0-127.968008 103.910022-231.942014 231.942015-231.942015 127.968008 0 231.942014 103.910022 231.942014 232.133967A232.133967 232.133967 0 0 1 512.147232 743.814046z"
+                  p-id="2251"></path>
+              </svg>
+              <!-- 开关按钮 -->
+              <span class="my-radio active" id="myRadio">
+                <i></i>
+              </span>
+              <svg t="1649159678284" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="3376" width="15" height="15">
+                <path
+                  d="M505.4 878.6c-196.7 0-358-150.9-374.9-343.1 1-18.6 16.1-33.4 34.9-33.4 10.8 0 20.5 4.8 26.9 12.4 0.2 0.3 0.5 0.1 0.5-0.7 41.6 44.2 100.5 71.9 166.1 71.9 127.1 0 230.1-103 230.1-230.1 0-66.1-28-125.1-72.6-166.8 0.1-0.1 0.5-0.1 0.3-0.3-7-6.5-11.4-15.7-11.4-26.1 0-19 14.9-34.1 33.7-35.3 192.1 17.1 342.9 178.3 342.9 375 0 208-168.5 376.5-376.5 376.5z"
+                  p-id="3377"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 顶部导航 -->
+    <div class="navigation">
+      <div class="nav-titleBox co zz">
+        <!-- 占位符 -->
+        <div class="co-left"></div>
+
+        <!-- 标题 -->
+        <div class="co-right ">
+          <span class="titleBox-tag">Haha HI.</span>
+          <h1>
+            You've been on my mind.
+          </h1>
+          <a class="buttom navbtn" href="#next-one">GET MORE.
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- 主要内容 -->
+    <div class="container content zz">
+
+      <!-- 占位符 -->
+      <div class="co-left">
+        <!-- 吸盘 -->
+        <div class="me-card carbox borderbefore" id="mycard">
+          <div class="mecar-title">
+            <div class="me-image">
+              <span class="status">
+                <i>米法之死</i>
+              </span>
+              <img src="./img/toux.jpg" alt="">
+            </div>
+            <h3>Nobodye1se的個人介紹</h3>
+            <p class="me-hover">
+              <span>米法終究會離開林克<br>即使是死去<br>但死別已吞聲 生別常惻惻.</span>
+            </p>
+          </div>
+          <div class="borderbotm"></div>
+          <div class="lianxi-list">
+            <a title="yyyy2903973872@hotmail.com" href="Mailto:yyyy2903973872@hotmail.com?Subject=邮箱标题&amp;Body=邮箱内容！">
+              <svg t="1649145973361" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="17271" width="15" height="15">
+                <path
+                  d="M983.899806 785.385782V224.886223h0.180631l-0.180631-4.696419c-0.180632-5.238314-0.722526-10.476627-1.806315-15.714941-2.890104-25.469042-21.675781-44.977245-45.519139-47.686717H122.287529c-11.741048 0-23.482096 1.625684-34.861881 5.238314-30.346093 10.295996-50.757453 40.100194-50.576821 74.058917v534.849885c-0.361263 21.314518 5.780208 42.087141 17.701887 59.789028l0.361263 0.722526 5.418946 3.973893c18.243782 21.856412 44.977245 34.319986 73.517022 34.500618H904.421944c37.751984 0 70.265655-27.094726 79.477862-66.291763l0.180631-0.541894c0.361263-5.96084 0.361263-11.741048-0.180631-17.701888zM390.16405 547.494091l55.453872 49.854295 43.893456 40.100194c5.418945 5.96084 13.005468 9.57347 21.133886 9.57347 7.947786 0 15.534309-3.431999 21.133886-9.57347l101.153642-91.941436 272.753572 263.721997H126.622685L390.16405 547.494091z m120.119951 30.346092L111.449638 216.03528H115.604163c214.409596-0.903158 703.559711-2.890104 793.875463-0.361263l-399.195625 362.166166z m165.458458-69.72376l251.619686-227.956959v474.518963L675.742459 508.116423z m-328.568707 0.180631L93.205856 760.278003V278.895043l253.967896 229.402011z"
+                  p-id="17272"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="borderbotm"></div>
+          <div class="mecar-bottm">
+            <div>
+              <span class="mecarbottm-key">常玩遊戲類型<br>FAVORITE GAME GENRES</span>
+              <span class="mecarbottm-value">OPEN WORLD<br>RPG&JRPG<br>ROGUE LIKE&ACT ect.</span>
+            </div>
+            <br><br><br><br>
+            <div style="text-align: center;">
+              <span class="mecarbottm-key">生於何方|FROM</span>
+              <span class="mecarbottm-value" >CN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </div>
+          </div>
+          <div class="borderbotm"></div>
+          <div class="buttom-box ">
+            <a class="button" href="Mailto:yyyy2903973872@hotmail.com?Subject=邮箱标题&amp;Body=邮箱内容！">CONTACT</a>
+          </div>
+        </div>
+      </div>
+      <!-- 右边 -->
+      <div class="co-right" id="next-one">
+        <!-- 遊戲 -->
+        <div class="content-li li1">
+          <div class="li1-box borderbefore">
+            <span>2.PM</span><span class="tag">-</span><span>2.AM</span>
+            <div class="borderbotm"></div>
+            <p>常玩遊戲時間(UTC+8:00)</p>
+          </div>
+          <div class="li1-box borderbefore">
+            <span>18</span><span class="tag">+</span>
+            <div class="borderbotm"></div>
+            <p>完美通關遊戲數量</p>
+          </div>
+          <div class="li1-box borderbefore">
+            <span>1158</span><span class="tag">+</span>
+            <div class="borderbotm"></div>
+            <p>總遊戲成就數量</p>
+          </div>
+        </div>
+        <!-- 遊戲歷程 -->
+        <div class="content-li li2">
+          <h3>
+            <span>遊戲曆程</span>
+            <div class="borderbotm"></div>
+            <span>01</span>
+          </h3>
+          <div class="carbox li2-box">
+            <blockquote>
+              從幼時的光暈,青年時的罪惡都市到成年時的巫師三|GTA5<br>Cyperpunk2077|NMS|ゼルダの伝説|etc.
+              <br>從晨曦漸入,落日微黃到星辰漫天.
+              <br>這些都是我異世界的夢.
+            </blockquote>
+          </div>
+        </div>
+        
+        <div class="content-li li7">
+          <h3>
+            <span>遊戲人格</span>
+            <div class="borderbotm"></div>
+            <span>04</span>
+          </h3>
+          <div class="li7-box">
+            <div class="carbox li7boxitem">
+              <div>
+                <h3>遊戲習慣</h3>
+                <div class="item-price">
+                  <sub>酒是消愁物,能消幾個時!</sub>
+
+                </div>
+              </div>
+              <div class="borderbotm"></div>
+              <p>RPG武器,防具,材料全收集.</p>
+              <p>OPENWORLD風景全觀覽.</p>
+              <br>
+              <div class="buttom-box ">
+                <a class="button" href="Mailto:yyyy2903973872@hotmail.com?Subject=邮箱标题&amp;Body=邮箱内容！">CONTACT</a>
+              </div>
+            </div>
+            <div class="carbox li7boxitem">
+              <div>
+                <h3>遊戲性格</h3>
+                <div class="item-price">
+                  <sub>夜來西風裡,九天雕鶚飛.困煞中原一布衣.</sub>
+                </div>
+              </div>
+              <div class="borderbotm"></div>
+              <p>睚眥必報.</p>
+              <p>急功近利.</p>
+              <p>慾達無人之境.</p>
+              <br>
+              <div class="buttom-box ">
+                <a class="button" href="Mailto:yyyy2903973872@hotmail.com?Subject=邮箱标题&amp;Body=邮箱内容！" >CONTACT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="borderbotm"></div>
+        <!-- 底部 -->
+      </div>
+      <div class="left">
+      </div>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="./js/paper-full.min.js"></script>
+<script type="text/javascript" src="./js/canvas.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/index1.js"></script>
+
+
+</html>
